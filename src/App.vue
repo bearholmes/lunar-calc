@@ -23,7 +23,7 @@
             </label>
           </div>
           <div class="input-group mt-3">
-            <input type="date" v-model="form.date" placeholder="태어난 날" class="form-control form-control-lg">
+            <input type="date" v-model="form.date" placeholder="태어난 날" class="form-control form-control-lg" max="2999-12-31">
             <!--      <input type="number" v-model.number="form.year" placeholder="연" maxlength="4" class="form-control form-control-lg">-->
             <!--      <input type="number" v-model.number="form.month" placeholder="월" maxlength="2" class="form-control form-control-lg">-->
             <!--      <input type="number" v-model.number="form.day" placeholder="일" maxlength="2" class="form-control form-control-lg">-->
