@@ -60,7 +60,7 @@
                       <span style="vertical-align: top;line-height: 14px">{{ item.dateSolar }}</span>
                       <img src="@/assets/img/icon_sun.png" width="12px" alt="양력" style="margin-top: 1px">
                     </strong>
-                    <p class="age_txt">만 {{ item.korAge }} 세</p>
+                    <p class="age_txt">{{ item.korAge }} 세</p>
                     <span class="vertical-timeline-element-date">
                       <img src="@/assets/img/icon_moon.png" width="12px" alt="음력" style="margin-top: 1px">
                       <span style="vertical-align: top;line-height: 14px">{{ item.dateLunar }}</span>
@@ -76,27 +76,6 @@
     <div class="mt-3 mb-4"  v-else-if="clicked && form.leapMonth">
       <p class="text-center">😱 윤달이 아닌 것 같네요</p>
     </div>
-    <!--    <div class="flex mt-3" style="justify-content: center" v-if="list && list.length > 0">-->
-    <!--      <table class="table table-striped">-->
-    <!--        <caption class="visually-hidden">표</caption>-->
-    <!--        <thead>-->
-    <!--        <tr>-->
-    <!--          <th>한국<br/>나이</th>-->
-    <!--          <th>음력</th>-->
-    <!--          &lt;!&ndash;            <th>만 나이</th>&ndash;&gt;-->
-    <!--          <th>양력</th>-->
-    <!--        </tr>-->
-    <!--        </thead>-->
-    <!--        <tbody>-->
-    <!--        <tr v-for="(item, idx) in list" :key="idx">-->
-    <!--          <td>{{ item.korAge }}</td>-->
-    <!--          <td>{{ item.dateLunar }}</td>-->
-    <!--          &lt;!&ndash;            <td>{{item.korAge - 1}}</td>&ndash;&gt;-->
-    <!--          <td>{{ item.dateSolar }}</td>-->
-    <!--        </tr>-->
-    <!--        </tbody>-->
-    <!--      </table>-->
-    <!--    </div>-->
     <p class="text-center" style="font-size: 10px">icon by <a href="https://icons8.kr/" target="_blank">icons8</a></p>
   </div>
 </template>
