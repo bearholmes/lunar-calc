@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Timeline Styles */
+.vertical-timeline {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  padding: 1.5rem 0 1rem;
+}
+
+.vertical-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 4px;
+  background: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.vertical-timeline-element {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+.vertical-timeline--animate .vertical-timeline-element-icon.bounce-in {
+  visibility: visible;
+  animation: cd-bounce-1 0.8s;
+}
+
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.vertical-timeline-element-icon {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.vertical-timeline-element-content {
+  position: relative;
+  width: calc(55% - 40px);
+  margin-left: calc(45% + 20px);
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.vertical-timeline-element-content .timeline-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 2px 0 0;
+  font-weight: normal;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  position: absolute;
+  right: calc(100% + 40px);
+  top: 0;
+  width: calc(45% - 40px);
+  text-align: right;
+  color: #666;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.vertical-timeline-element-content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.icon {
+  display: inline-block;
+  margin: 3px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #999;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+img {
+  vertical-align: top;
+}
+
+.age_txt {
+  font-size: 13px;
+  color: #666666;
+}
