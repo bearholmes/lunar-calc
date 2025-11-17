@@ -16,13 +16,13 @@ export const TimelineItem = memo(({ item }: TimelineItemProps) => {
         </span>
         <div className="vertical-timeline-element-content bounce-in">
           <strong className="timeline-title">
-            <span>{item.solarDate}</span>
+            <span className="tracking-tight">{item.solarDate}</span>
             <img src={iconSun} width="12px" alt="양력" />
           </strong>
-          <p className="age_txt">{item.age} 세</p>
+          <p className="age_txt">{item.age}세</p>
           <span className="vertical-timeline-element-date">
             <img src={iconMoon} width="12px" alt="음력" />
-            <span>{item.lunarDate}</span>
+            <span className="tracking-tight">{item.lunarDate}</span>
           </span>
         </div>
       </div>
